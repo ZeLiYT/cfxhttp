@@ -540,7 +540,7 @@ function create_config(ctype, url, uuid) {
         }
     } else if (ctype === 'xhttp') {
         stream['xhttpSettings'] = {
-            mode: 'stream-one',
+            mode: 'packet-up',
             host,
             path,
             noGRPCHeader: false,
@@ -591,7 +591,7 @@ const config_template = `{
         "tlsSettings": {
           "serverName": "localhost",
           "alpn": [
-            "h2"
+            "h3"
           ]
         }
       }
